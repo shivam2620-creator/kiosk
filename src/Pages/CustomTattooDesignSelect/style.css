@@ -18,7 +18,7 @@
 .custom-tattoo-design-option{
         display: flex;
     flex-wrap: wrap;
-    gap: 1.4rem;
+    gap: 1rem;
     align-items: flex-start;
     align-content: flex-start;
 }

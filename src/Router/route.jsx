@@ -7,7 +7,7 @@ import NewBookingSelection from "../Pages/NewBookingSelection/NewBookingSelectio
 import CustomTattoDesignSelect from "../Pages/CustomTattooDesignSelect/CustomTattoDesignSelect";
 import FlashTattooDesignSelect from "../Pages/FlashTattooDesignSelect/FlashTatooDesignSelect";
 import PiercingSelect from "../Pages/PiercingSelect/PiercingSelect";
-import CoverupTattooDesignSelect from "../Pages/CoverupTattooDesignSelect/CoverupTattooDesignselect";
+import CoverupTattooDesignSelect from "../Pages/CoverupTattooDesignSelect/CoverupTattooDesignSelect";
 import CustomTattooSizeSelect from "../Pages/CustomTattooSizeSelect/CustomTattooSizeSelect";
 import AppointmentBooking from "../Pages/AppointmentBooking/AppointmentBooking";
 import FlashTattooSizeSelection from "../Pages/FlashTattooSizeSelect/FlashTattooSizeSelect";

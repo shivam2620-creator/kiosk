@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useDispatch } from "react-redux";
 import { onChangeAppointmentDetails } from "../../Redux/AppointmentDetailSlice"
 import { useNavigate } from "react-router-dom";
-import "./style.css"
+import "./Style.css"
 
 const AppointmentForm = () => {
   const [appointmentData, setAppointmentData] = useState({

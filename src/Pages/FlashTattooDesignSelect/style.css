@@ -1,0 +1,101 @@
+.flash-tattoo-service{
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    width: 100%;
+}
+.flash-tattoo-search input{
+  width: 100%;
+  border: 1px solid #5D5D5D;
+  padding: 10px;
+  border-radius: 11px;
+  background-color: #FFFFFF26;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  outline: none;
+
+}
+.flash-tattoo-search input::placeholder{
+    color: white;
+}
+
+.flash-tattoo-search input:focus{
+    border: 2px solid #5D5D5D;
+}
+
+.flash-card.selected,
+.flash-card:hover {
+  border: 2px solid #ECAA20;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(236, 170, 32, 0.6);
+  border-radius: 8px;
+  
+}
+
+.flash-card.selected:hover
+
+/* wrapper controls scroll height */
+.flash-tattoo-grid-wrapper {
+/* make grid area scrollable when content grows */
+overflow-y: auto;
+/* limit height so scrolling is visible; tweak as needed */
+max-height: calc(100vh - 180px);
+}
+
+
+.flash-tattoo-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr); /* mobile: 2 columns */
+gap: 20px;
+padding: 8px 0;
+box-sizing: border-box;
+}
+
+
+/* tablet and up: 4 columns in a single row if the container is wide enough */
+@media (min-width: 768px) {
+.flash-tattoo-grid {
+grid-template-columns: repeat(4, 1fr);
+}
+}
+
+
+.flash-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 8px;
+cursor: pointer;
+}
+
+
+/* Square placeholder that keeps 1:1 aspect ratio */
+.flash-card-square {
+width: 100%;
+aspect-ratio: 1 / 1; /* modern browsers */
+background: linear-gradient(135deg, #f6f6f6, #e9e9e9);
+border: 1px dashed #ccc;
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 12px;
+color: #666;
+}
+
+
+.flash-card-title {
+font-size: 13px;
+text-align: center;
+width: 100%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+
+/* Make sure the scrollable container shows nice scrolling on touch devices */
+.flash-tattoo-grid-wrapper {
+-webkit-overflow-scrolling: touch;
+}

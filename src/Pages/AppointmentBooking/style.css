@@ -1,0 +1,9 @@
+.appointmen-booking{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.appointment-booking-divider{
+    border: 1px solid #5D5D5D;
+}

@@ -1,0 +1,27 @@
+.tattoo-option-pick-page{
+    text-align: center;
+}
+
+.tattoo-option-pick-page-title h1{
+    color: #ECAA20;
+    font-weight: 400;
+    font-size: 54px;
+}
+
+.tattoo-option-pick-page-title p{
+    color: white;
+    font-weight: 400;
+    font-size: 28px;
+    font-family: Anton;
+}
+
+
+
+
+.tattoo-option-pick-options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 70px;
+    margin-top: 30px;
+}

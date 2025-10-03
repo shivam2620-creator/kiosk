@@ -1,0 +1,107 @@
+
+
+.appointment-details{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #2F2F2F;
+    border-radius: 22px;
+    padding: 30px 40px;
+    width: 100%;
+}
+
+.appointment-details h3{
+font-weight: 600;
+
+font-size: 18px;
+
+
+}
+
+.appointment-detail-img-cont{
+    width: 86px;
+    height: 86px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.appointment-detail-img-cont img{
+    border-radius: 8px;
+    background-color: white;
+}
+
+.appointment{
+    display: flex;
+    gap: 3rem;
+}
+
+.service-detail-cont{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 1rem;
+}
+
+.service-option{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.service-option span{
+font-family: Termina Test;
+font-weight: 500;
+font-style: Medium;
+font-size: 12px;
+color: #9A9A9A;
+
+}
+.flash-tattoo-size-service-option p {
+    border: 1px solid #ECAA20;
+    border-radius: 22px;
+    padding: 5px 10px;
+    align-self: flex-start;
+}
+
+
+.appointment-user-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.appointment-option{
+    display: flex;
+    gap: 20px;
+     
+  
+}
+
+.appointment-option p:first-child {
+  flex: 0 0 40%; /* fixed 30% width */
+ 
+}
+
+.appointment-option p:nth-child(2) {
+  flex: 1;            /* take remaining space */
+  word-wrap: break-word; /* break long words */
+  overflow-wrap: anywhere; /* wrap anywhere if too long */
+  white-space: normal; /* allow text to wrap */
+}
+
+@media(max-width: 1016px){
+    .appointment-option{
+   flex-direction: column;
+gap: 0px;
+}
+
+.appointment-option p:first-child{
+    color: #9A9A9A;
+}
+
+.appointment-user-detail{
+    gap: 1rem;
+}
+
+}

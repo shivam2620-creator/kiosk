@@ -1,0 +1,14 @@
+.welcome-screen{
+    height: 100vh;
+}
+
+.pages-container{
+    height:75vh;
+    padding:  30px 40px;
+}
+
+@media(max-width: 1100px){
+    .pages-container{
+        height: 80vh;
+    }
+}

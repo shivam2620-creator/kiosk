@@ -1,0 +1,56 @@
+.header{
+    height: 25vh;
+    border-bottom: 2px solid #ECAA20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-tattoo-header,
+.piercing-tattoo-header{
+ background-repeat: no-repeat;
+    background-position: center;
+    background-size:  cover;
+}
+.custom-tattoo-header{
+    background-image: url("../../assets/header-bg.png");
+   
+}
+.flash-tattoo-header{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flash-tattoo-header img{
+    height: 100%;
+    width: 76%;
+    object-fit: contain cover;
+    overflow: hidden;
+}
+
+.piercing-tattoo-header{
+     background-image: url("../../assets/piercing-header-img.png");
+}
+
+.custom-tattoo-header img{
+    width: 50%;
+}
+
+
+@media(max-width: 1100px){
+    .header{
+        height: 20vh;
+    }
+
+    .custom-tattoo-header img{
+    width: 60%;
+}
+}
+
+@media(max-width: 450px){
+
+       .custom-tattoo-header img{
+    width: 80%;
+}
+}

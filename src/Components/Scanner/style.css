@@ -1,0 +1,63 @@
+.qr-scanner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.scanner-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.qr-scanner {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.custom-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #00ff99;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.8);
+  pointer-events: none;
+}
+
+.scan-instruction {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+
+.cancel-button {
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cancel-button:hover {
+  background: #d9363e;
+}

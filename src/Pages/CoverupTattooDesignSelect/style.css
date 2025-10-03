@@ -1,0 +1,32 @@
+.coverup-tattoo-design-select{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.coverup-tattoo-desing-selection-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.coverup-tattoo-desing-selection-detail h3{
+    font-family: Anton;
+    color: #DFDFDF;
+}
+
+.tattoo-placement{
+font-family: Termina Test;
+font-weight: 500;
+
+}
+
+
+
+.coverup-tattoo-design-option{
+        display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    align-items: flex-start;
+    align-content: flex-start;
+}

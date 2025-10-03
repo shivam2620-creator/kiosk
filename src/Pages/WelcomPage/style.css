@@ -1,0 +1,25 @@
+.welcome-page-title h1{
+  font-weight: 400 !important ;
+  font-size: 96px !important;
+  text-align: center;
+}
+
+.welcome-page-title p{
+font-weight: 400 !important;
+font-size: 64px !important;
+text-align: center;
+font-family: Anton;
+
+}
+
+.welcome-page-title p span{
+    color: #ECAA20;
+}
+
+.welcome-page-options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 70px;
+    margin-top: 20px;
+}

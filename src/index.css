@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.cdnfonts.com/css/termina-test');
+
+
+*{
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Anton", sans-serif;
+  --background-color: #222222;
+  --button-color: #ECAA20;
+  --secondary-text-color: #DFDFDF;
+  --card-color: #353535;
+  
+}
+
+body{
+   background-color: var(--background-color);
+   line-height: 1;
+}
+
+p{
+font-family: Termina Test;
+font-weight: 600;
+font-size: 16px;
+color: white;
+margin-top: 1rem;
+}
+
+h1{
+  color: white;
+  text-transform: uppercase;
+}
+
+h2{
+font-family: Termina Test;
+font-weight: 400;
+font-style: Regular;
+font-size: 40px;
+text-transform: uppercase;
+color: white;
+
+}
+
+
+h3{
+font-family: Termina Test;
+font-weight: 400;
+font-size: 24px;
+text-transform: uppercase;
+color : var(--secondary-text-color);
+
+}
+
+button{
+  background-color: var(--button-color);
+  font-family: Termina Test;
+font-weight: 600;
+font-style: Demi;
+font-size: 28px;
+
+
+}

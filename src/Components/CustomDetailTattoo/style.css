@@ -1,0 +1,49 @@
+.custom-tattoo-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.custom-tattoo-detail h3{
+    font-weight: 600;
+}
+
+.custom-tattoo-detail-secton{
+    display: flex;
+    gap: 20px;
+}
+.custom-tattoo-detail-img-section{
+    width: 177px;
+    height: 177px;
+
+    border-radius: 10px;
+}
+.custom-tattoo-detail-img-section img{
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.custom-tattoo-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-tattoo-details{
+    margin-top: 1.5rem;
+}
+.custom-tattoo-details h2{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+}
+
+.custom-tattoo-detail p{
+    font-size: 18px;
+}
+
+.custom-tattoo-detail p span{
+    color: #BABABA;
+    font-family: Termina Test;
+}

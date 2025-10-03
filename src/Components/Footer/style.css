@@ -1,0 +1,90 @@
+.footer{
+    display: flex;   
+    border: 1px solid #5D5D5D;
+     
+}
+
+.footer-visit-us-img{
+    width: 20%;
+    border: 1px solid #5D5D5D;
+}
+
+.footer-tattoo-details{
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 20px;
+
+}
+
+.footer-service-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-service-detail-info{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.footer-service-detial-info p:first-child{
+    width: 30%;
+}
+
+.footer-service-detail-info p:last-child{
+    
+     color: #BABABA;
+    font-family: Termina Test;
+    font-weight: 600;
+}
+.flash-tattoo-service-size{
+    border: 1px solid #ECAA20;
+    padding :5px 18px;
+    border-radius: 22px;
+}
+.footer-servic-img{
+    width: 122px;
+    height: 122px;
+    border-radius: 14px;
+    border: 1px solid #ECAA20
+}
+.footer-servic-img img{
+     border-radius: 14px;
+}
+
+.footer-service-detail h3{
+    font-weight:  600;
+}
+
+.footer button{
+    
+    padding: 3rem 5rem;
+  
+    font-size: 20px;
+    border-radius: 17px;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    margin-right: 20px;
+}
+
+
+@media(max-width: 1100px){
+.footer-visit-us-img{
+    width: 25%;
+  }
+}
+
+@media(max-widtH: 1000px){
+    .footer-tattoo-details{
+        flex-direction: column;
+        
+    }
+    .footer-service-detail{
+        padding: 0;
+    }
+}

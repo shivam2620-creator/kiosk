@@ -1,0 +1,50 @@
+.flash-tattoo-location-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 2.9rem;
+}
+
+.flash-tattoo-location-select-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.flash-tattoo-location{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+.flash-tattoo-location-heading h3{
+    color: #DFDFDF;
+    font-family: anton;
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #353535;
+    padding: 10px;
+    border-radius: 22px;
+    cursor: pointer;
+
+}
+.location.selected,
+.location:hover {
+  border: 2px solid #ECAA20;
+  box-shadow: 0 0 15px rgba(236, 170, 32, 0.6);
+  border-radius: 22px;
+  
+}
+.location:hover{
+  transform: scale(1.01);
+}
+
+.location-img-cont{
+    width: 106px;
+    height: 106px;
+    background-color: #817B7B;
+    border-radius: 14px;
+}

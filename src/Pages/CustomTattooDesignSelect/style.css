@@ -1,0 +1,24 @@
+.custom-tattoo-design-selection{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.custom-tattoo-desing-selection-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.custom-tattoo-desing-selection-detail h3{
+    font-family: anton;
+    color: #DFDFDF;
+}
+
+.custom-tattoo-design-option{
+        display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    align-items: flex-start;
+    align-content: flex-start;
+}

@@ -1,0 +1,9 @@
+.appointment-cont{
+    display: flex;
+
+}
+
+.appointment-detail-cont{
+    flex: 1;
+    padding: 20px;
+}

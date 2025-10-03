@@ -1,0 +1,32 @@
+.piercing-select{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.piercing-select-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.piercing-select-detail h3{
+    font-family: Anton;
+    color: white;
+}
+
+.tattoo-placement{
+font-family: Termina Test;
+font-weight: 500;
+
+}
+
+
+
+.piercing-option{
+        display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    align-items: flex-start;
+    align-content: flex-start;
+}

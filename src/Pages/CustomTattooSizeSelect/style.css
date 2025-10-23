@@ -25,11 +25,14 @@
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
   align-items: start;
+  /* display: flex;
+  gap: 1rem;
+  overflow: scroll;; */
 }
 
 /* tablet: slightly smaller cards */
 @media (max-width: 1023px) and (min-width: 768px) {
-  .custom-tattoo-size-option {
+  .custom-tattoo-sizes-option{
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.25rem;
   }
@@ -38,7 +41,7 @@
 
 /* mobile: even smaller cards */
 @media (max-width: 767px) {
-  .custom-tattoo-size-option {
+  .custom-tattoo-sizes-option {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 0.6rem;
   }

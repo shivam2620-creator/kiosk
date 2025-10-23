@@ -19,7 +19,7 @@ const FlashTattooColorSelect = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const falshTattooDetail = useSelector(state => state.flashTattoo)
-    const nextStep = () => navigate("/service/flash-tattoo/book-appointmen")
+    const nextStep = () => navigate("/service/flash-tattoo/book-appointment")
          useEffect(() => {
                   dispatch(setFlashTattooColor(buttons[selectedIndex].text))
               },[selectedIndex])

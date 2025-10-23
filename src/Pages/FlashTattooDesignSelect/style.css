@@ -1,7 +1,7 @@
 .flash-tattoo-service{
     display: flex;
     flex-direction: column;
-    gap: 33px;
+    gap: 25px;
     width: 100%;
 }
 .flash-tattoo-search input{
@@ -27,7 +27,6 @@
 .flash-card.selected,
 .flash-card:hover {
   border: 2px solid #ECAA20;
-  transform: scale(1.05);
   box-shadow: 0 0 15px rgba(236, 170, 32, 0.6);
   border-radius: 8px;
   

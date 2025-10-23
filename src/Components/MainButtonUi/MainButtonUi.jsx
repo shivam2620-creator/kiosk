@@ -26,7 +26,7 @@ const SidebarButtonUi = ({ service, selectedService, isSeleted, setSelectedIndex
     >
       {/* image - loading lazy */}
       <div className="main-service-image">
-        <img src={service.img} alt={service.text} loading="lazy" decoding="async" />
+        {service.img && <img src={service.img} alt={service.text} loading="lazy" decoding="async" />}
       </div>
       <p className="main-service-label">{service.text}</p>
     </button>

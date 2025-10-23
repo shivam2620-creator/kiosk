@@ -18,12 +18,12 @@ const CustomTattooSizeSelect = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const buttons = [
-        { img: tattooSmall, text: "Tattoo Small"},
-        { img: tattooMedium, text: "Tattoo Medium"},
-        { img: tattooLarge, text: "Tattoo Large" },
+        { img: tattooSmall, text: "Tattoo Small", value : "small"},
+        { img: tattooMedium, text: "Tattoo Medium" , value : "medium"},
+        { img: tattooLarge, text: "Tattoo Large", value : "large" },
     ];
     console.log(customTattooDetail)
-    const nextStep = () => navigate("/service/custom-tattoo/location")
+    const nextStep = () => navigate("/service/custom-tattoo/book-appointment")
 
     useEffect(() => {
          if(customTattooDetail.tattooOption === ""){
@@ -31,7 +31,7 @@ const CustomTattooSizeSelect = () => {
          }
     },[])
      useEffect(() => {
-              dispatch(setCustomTattoSize(buttons[selectedIndex].text))
+              dispatch(setCustomTattoSize(buttons[selectedIndex].value))
               dispatch(setCustomTattooIsActive(true))
           },[selectedIndex])
   return (

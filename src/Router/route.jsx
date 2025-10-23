@@ -11,7 +11,6 @@ import CoverupTattooDesignSelect from "../Pages/CoverupTattooDesignSelect/Coveru
 import CustomTattooSizeSelect from "../Pages/CustomTattooSizeSelect/CustomTattooSizeSelect";
 import AppointmentBooking from "../Pages/AppointmentBooking/AppointmentBooking";
 import FlashTattooSizeSelection from "../Pages/FlashTattooSizeSelect/FlashTattooSizeSelect";
-import FlashTattooLocationSelect from "../Pages/FlashTattooLocationSelect/FlashTattooLocationSelect";
 import CoverupTattooSizeSelect from "../Pages/CoverupTattooSizeSelect/CoverupTattooSizeSelect";
 import CoverupTattooColorSelect from "../Pages/CoverupTattooColorSelect/CoverupTattooColorSelect";
 import FlashTattooColorSelect from "../Pages/FlashTattooColorSelect/FlashTattooColorSelect";
@@ -67,13 +66,13 @@ const router = createBrowserRouter([
                 path: "custom-tattoo/size",
                 element: <CustomTattooSizeSelect />
             },
-            {
-                path: "custom-tattoo/location",
-                element: <FlashTattooLocationSelect />
-            },
+            // {
+            //     path: "custom-tattoo/location",
+            //     element: <FlashTattooLocationSelect />
+            // },
             {
                path:"custom-tattoo/book-appointment",
-               element : <AppointmentBooking />
+               element : <CalenderPage />
             },
             {
                 path: "flash-tattoo",
@@ -84,31 +83,32 @@ const router = createBrowserRouter([
                 path: "flash-tattoo/size",
                 element: <FlashTattooSizeSelection />
             },
-            {
-                path: "flash-tattoo/location",
-                element: <FlashTattooLocationSelect />
-            },
+            // {
+            //     path: "flash-tattoo/location",
+            //     element: <FlashTattooLocationSelect />
+            // },
             {
                 path: "flash-tattoo/color",
                 element: <FlashTattooColorSelect />
             },
             {
                  path: "flash-tattoo/book-appointment",
-                 element : <AppointmentBooking/>
+                 element :  <CalenderPage />
             },
             {
                 path: "piercing",
                 element : <PiercingSelect/>
                 
             },
-            {
-                path: "piercing/location",
-                // element: <FlashTattooLocationSelect />
-                element : <CalenderPage />
-            },
+            // {
+            //     path: "piercing/location",
+            //     element: <FlashTattooLocationSelect />
+              
+            // },
+
             { 
                 path: "piercing/book-appointment",
-                element: <AppointmentBooking />
+                element: <CalenderPage />
             },
             {
                 path: "coverup-tattoo",
@@ -122,13 +122,13 @@ const router = createBrowserRouter([
                  path: "coverup-tattoo/color",
                  element : <CoverupTattooColorSelect />
             },
-            {
-                path: "coverup-tattoo/location",
-                element: <FlashTattooLocationSelect />
-            },
+            // {
+            //     path: "coverup-tattoo/location",
+            //     element: <FlashTattooLocationSelect />
+            // },
             {
                  path: "coverup-tattoo/book-appointment",
-                 element : <AppointmentBooking/>
+                 element : <CalenderPage />
             },
             
 

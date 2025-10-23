@@ -3,15 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
 
-        service : "custom-tattoo",
+        service : "tattoo",
+        sub_type: "custom",
         img :"",
-        tattooOption : "",
-        size : "",
+        tattoo_option : "",
+        tattoo_size : "",
         isActive : false,
-        location : {
-            name : "",
-            id : ""
-        },
+      
     
 }
 
@@ -20,11 +18,11 @@ const customTattoSlice = createSlice({
     initialState,
     reducers : {
         setTattooOption : (state,action) => {
-                state.tattooOption = action.payload
+                state.tattoo_option = action.payload
         }
         ,
         setCustomTattoSize : (state,action) => {
-            state.size = action.payload;
+            state.tattoo_size = action.payload;
         },
         setCustomTattooImg : (state,action) => {
             state.img = action.payload
@@ -32,12 +30,10 @@ const customTattoSlice = createSlice({
         setCustomTattooIsActive: (state,action) => {
             state.isActive = action.payload
         },
-        setCustomtattooLocation : (state,action) => {
-            state.location = action.payload
-        },
+  
         resetCustomTattooValue : () => initialState
     }
 })
 
-export const  {setCustomtattooLocation,setTattooOption,setCustomTattoSize,setCustomTattooImg,setCustomTattooIsActive,resetCustomTattooValue} = customTattoSlice.actions
+export const  {setTattooOption,setCustomTattoSize,setCustomTattooImg,setCustomTattooIsActive,resetCustomTattooValue} = customTattoSlice.actions
 export default customTattoSlice.reducer

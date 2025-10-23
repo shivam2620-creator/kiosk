@@ -1,17 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { setTattooOption } from "./CustomTattooDetailSlice";
 
 
 const initialState = {
 
-        service : "flash-tattoo",
-        img :"",
+        service : "tattoo",
+        sub_type: "flash",
         tattooOption : "",
-        color: "",
-        size : "",
-        location : {
-            name : "",
-            id : ""
-        },
+        img :"",
+        tattoo_color : "",
+        tattoo_size : "",
         isActive : false,
     
 }
@@ -21,27 +19,24 @@ const flashTattoSlice = createSlice({
     initialState,
     reducers : {
         setFlashTattooOption : (state,action) => {
-                state.tattooOption = action.payload
+            state.tattooOption = action.payload
         },
-        
+
         setFlashTattoSize : (state,action) => {
-            state.size = action.payload;
+            state.tattoo_size = action.payload;
         },
         setFlashTattooImg : (state,action) => {
             state.img = action.payload
-        },
-        setFlashTattooLocation : (state,action) => {
-            state.location = action.payload
         },
         setFlashTattooIsActive: (state,action) => {
             state.isActive = action.payload
         },
         setFlashTattooColor : (state,action) => {
-            state.color = action.payload
+            state.tattoo_color = action.payload
         },
         resetFlashTattooValue : () => initialState
     }
 })
 
-export const  {setFlashTattooColor,setFlashTattoSize,setFlashTattooLocation,setFlashTattooIsActive,setFlashTattooOption,setFlashTattooImg,resetFlashTattooValue} = flashTattoSlice.actions
+export const  {setFlashTattooOption,setFlashTattooColor,setFlashTattoSize,setFlashTattooIsActive,setFlashTattooImg,resetFlashTattooValue} = flashTattoSlice.actions
 export default flashTattoSlice.reducer

@@ -26,6 +26,7 @@ import Transition from "../../Transition"
         {img: belly, text: "Belly"},
         { img: neck, text: "Neck" },
         {img: chest,text: "Chest"},
+        {img: "" , text : "other"}
         
       ];
 

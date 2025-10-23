@@ -37,14 +37,14 @@ const Footer = () => {
 
          { customTattooDetail.isActive && <div className="footer-service-detail">
             <h3>Custom Tattoos</h3>
-            {customTattooDetail.tattooOption && <div className="footer-service-detail-info">
+            {customTattooDetail.tattoo_option && <div className="footer-service-detail-info">
                 <p>Tattoo Option: </p>
-               <p>{customTattooDetail.tattooOption}</p>
+               <p>{customTattooDetail.tattoo_option}</p>
             </div>}
 
             {customTattooDetail.size && <div className="footer-service-detail-info">
                <p>Size of Tattoo: </p>
-               <p>{customTattooDetail.size}</p>
+               <p>{customTattooDetail.tattoo_size}</p>
             </div>}
              
             
@@ -54,41 +54,41 @@ const Footer = () => {
           { flashTattoDetail.isActive && <div className="footer-service-detail">
             {flashTattoDetail.tattooOption && <h3>{flashTattoDetail.tattooOption}</h3>}
             
-            {flashTattoDetail.size && <div className="footer-service-detail-info ">
+            {flashTattoDetail.tattoo_size && <div className="footer-service-detail-info ">
                <p>Size: </p>
-               <p className="flash-tattoo-service-size">{flashTattoDetail.size}</p>
+               <p className="flash-tattoo-service-size">{flashTattoDetail.tattoo_size}</p>
             </div>}
              
-             {flashTattoDetail.location.name && <div className="footer-service-detail-info">
+             {/* {flashTattoDetail.location.name && <div className="footer-service-detail-info">
                 <p>Locaion:  </p>
                <p>{flashTattoDetail.location.name}</p>
-            </div>}
+            </div>} */}
             
           </div>
           }
 
           {/* piercing detail */}
           { piercingDetail.isActive && <div className="footer-service-detail">
-            {piercingDetail.type && <h3>{piercingDetail.type }</h3>}
+            {piercingDetail.sub_type && <h3>{piercingDetail.sub_type }</h3>}
           </div>
           }
           {/* coverup tattoo */}
           { coverupTattooDetail.isActive && <div className="footer-service-detail">
             {<h3>Coverup / Rework Tattoos</h3>}
             
-            {coverupTattooDetail.placement && <div className="footer-service-detail-info ">
+            {coverupTattooDetail.tattoo_placement && <div className="footer-service-detail-info ">
                <p>Tattoo Placement : </p>
-               <p >{coverupTattooDetail.placement}</p>
+               <p >{coverupTattooDetail.tattoo_placement}</p>
             </div>}
              
-             {coverupTattooDetail.size && <div className="footer-service-detail-info">
+             {coverupTattooDetail.tattoo_size && <div className="footer-service-detail-info">
                 <p>Size of Tattoo:  </p>
-               <p>{coverupTattooDetail.size}</p>
+               <p>{coverupTattooDetail.tattoo_size}</p>
             </div>
             }
-            {coverupTattooDetail.color && <div className="footer-service-detail-info">
+            {coverupTattooDetail.tattoo_color && <div className="footer-service-detail-info">
                 <p>Color:  </p>
-               <p>{coverupTattooDetail.color}</p>
+               <p>{coverupTattooDetail.tattoo_color}</p>
             </div>
             }
 

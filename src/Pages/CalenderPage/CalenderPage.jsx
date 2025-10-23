@@ -1,19 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import { getCalenderApi } from '../../Apis/SlotsApi'
+import { useSelector } from 'react-redux'
+import { useMemo } from 'react'
 
 const studioId = "YlPB9PmfgwOA4DaU7VjB"
 
 const CalenderPage = () => {
-  const [data] = useState({
-    service: "piercing",
-    sub_type: "belly"
-  })
+    const customTattooDetail = useSelector((s) => s.customTattoo);
+  const flashTattoDetails = useSelector((s) => s.flashTattoo);
+  const coverupTattooDetails = useSelector((s) => s.coverupTattoo);
+  const piercingDetail = useSelector((s) => s.piercing);
+
+    const currentService = useMemo(() => {
+      if (customTattooDetail?.isActive) return customTattooDetail;
+      if (flashTattoDetails?.isActive) return flashTattoDetails;
+      if (coverupTattooDetails?.isActive) return coverupTattooDetails;
+      if (piercingDetail?.isActive) return piercingDetail;
+      return null;
+    }, [customTattooDetail, flashTattoDetails, coverupTattooDetails, piercingDetail]);
 
   const [calendarId, setCalenderId] = useState();
 
   const fetchCalender = async () => {
     try {
-      const res = await getCalenderApi(studioId, data)
+      const res = await getCalenderApi(studioId,currentService)
       setCalenderId(res.data.calendarId)
       console.log(res);
     } catch (err) {

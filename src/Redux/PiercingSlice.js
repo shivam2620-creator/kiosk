@@ -4,13 +4,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
 
         service : "piercing",
+      
         img : "",
         isActive : false,
-        type : "",
-        location : {
-            name : "",
-            id : ""
-        }
+        sub_type : "",
+        
         
 }
 
@@ -19,7 +17,7 @@ const piercingSlice = createSlice({
     initialState,
     reducers : {
        setPiercingType : (state,action) => {
-             state.type = action.payload
+             state.sub_type = action.payload
        },
        setPiercingIsActive : (state,action) => {
         state.isActive = action.payload
@@ -27,12 +25,10 @@ const piercingSlice = createSlice({
        setPiercingImg : (state,action) => {
         state.img = action.payload
        },
-       setPiercingLocation : (state,action) => {
-            state.location = action.payload
-        },
+      
        resetPiercingValue : () => initialState
     }
 })
 
-export const  {setPiercingLocation,setPiercingType,setPiercingImg,setPiercingIsActive,resetPiercingValue} = piercingSlice.actions
+export const  {setPiercingType,setPiercingImg,setPiercingIsActive,resetPiercingValue} = piercingSlice.actions
 export default piercingSlice.reducer

@@ -10,8 +10,8 @@ import MainButtonUi from "../../Components/MainButtonUi/MainButtonUi"
 import { useSelector } from "react-redux"
 
   const buttons = [
-        { img: flash_color_img, text: "Colored" },
-        { img: flash_black_white_img, text: "Black & White"},
+        { img: flash_color_img, text: "Colored",value : "coloured" },
+        { img: flash_black_white_img, text: "Black & White", value : "black_only"},
       
     ];
 const FlashTattooColorSelect = () => {
@@ -19,7 +19,7 @@ const FlashTattooColorSelect = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const falshTattooDetail = useSelector(state => state.flashTattoo)
-    const nextStep = () => navigate("/service/flash-tattoo/location")
+    const nextStep = () => navigate("/service/flash-tattoo/book-appointmen")
          useEffect(() => {
                   dispatch(setFlashTattooColor(buttons[selectedIndex].text))
               },[selectedIndex])

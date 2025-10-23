@@ -11,8 +11,8 @@ import MainButtonUi from "../../Components/MainButtonUi/MainButtonUi"
 import { useSelector } from "react-redux"
 
   const buttons = [
-        { img: colorTattooImg, text: "Colored" },
-        { img: BlackandWhiteTattooImg, text: "Black & White"},
+        { img: colorTattooImg, text: "Colored",value : "colored" },
+        { img: BlackandWhiteTattooImg, text: "Black & White",value : "black_and_white"},
       
     ];
 const CoverupTattooColorSelect = () => {
@@ -20,13 +20,13 @@ const CoverupTattooColorSelect = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const coverupTattooDetail = useSelector(state => state.coverupTattoo)
-    const nextStep = () => navigate("/service/coverup-tattoo/location")
+    const nextStep = () => navigate("/service/coverup-tattoo/book-appointment")
          useEffect(() => {
-                  dispatch(setCoverTattooColor(buttons[selectedIndex].text))
+                  dispatch(setCoverTattooColor(buttons[selectedIndex].value))
               },[selectedIndex])
        
               useEffect(() => {
-                 if(coverupTattooDetail.size === "" || coverupTattooDetail.placement === ""){
+                 if(coverupTattooDetail.tattoo_size === "" || coverupTattooDetail.tattoo_placement === ""){
                     navigate("/service")
                  }
             },[])

@@ -13,9 +13,9 @@ import MainButtonUi from "../../Components/MainButtonUi/MainButtonUi";
 import { useState,useEffect } from "react";
 
   const buttons = [
-        { img: tattooSmall, text: "Tattoo Small",  value : "Small" },
-        { img: tattooMedium, text: "Tattoo Medium", value : "Medium"},
-        { img: tattooLarge, text: "Tattoo Large", value : "Large" },
+        { img: tattooSmall, text: "Tattoo Small",  value : "small" },
+        { img: tattooMedium, text: "Tattoo Medium", value : "medium"},
+        { img: tattooLarge, text: "Tattoo Large", value : "large" },
     ];
 const CoverupTattooSizeSelect = () => {
  
@@ -26,7 +26,7 @@ const CoverupTattooSizeSelect = () => {
       const nextStep = () => navigate("/service/coverup-tattoo/color")
       
       useEffect(() => {
-         if(coverupTattooDetail.placement === ""){
+         if(coverupTattooDetail.tattoo_placement === ""){
             navigate("/service")
          }
     },[])

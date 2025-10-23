@@ -32,7 +32,7 @@ const PiercingSelect = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const nextStep = () => navigate("/service/piercing/location")
+    const nextStep = () => navigate("/service/piercing/book-appointment")
     useEffect(() => {
                   dispatch(setPiercingType(buttons[selectedIndex].text))
                   dispatch(setPiercingIsActive(true))

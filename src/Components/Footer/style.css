@@ -31,13 +31,11 @@
     gap: 10px;
     align-items: center;
 }
-.footer-service-detial-info p:first-child{
-    width: 30%;
+.footer-service-detail-info p:first-child{
+    color: #BABABA !important;
 }
 
 .footer-service-detail-info p:last-child{
-    
-     color: #BABABA;
     font-family: Termina Test;
     font-weight: 600;
 }

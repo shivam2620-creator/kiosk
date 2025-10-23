@@ -58,6 +58,12 @@ const Footer = () => {
                <p>Size: </p>
                <p className="flash-tattoo-service-size">{flashTattoDetail.tattoo_size}</p>
             </div>}
+
+            {flashTattoDetail.tattoo_color && <div className="footer-service-detail-info ">
+               <p>Color: </p>
+               <p >{flashTattoDetail.tattoo_color}</p>
+            </div>}
+
              
              {/* {flashTattoDetail.location.name && <div className="footer-service-detail-info">
                 <p>Locaion:  </p>

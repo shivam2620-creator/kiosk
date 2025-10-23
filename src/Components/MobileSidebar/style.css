@@ -1,0 +1,22 @@
+.mobile-sidebar-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color); /* semi-transparent background */
+    display: flex;
+    justify-content: flex-end; /* align sidebar to the right */
+    z-index: 1000; /* ensure it's above other content */
+}
+
+.close-modal{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 1100; /* ensure it's above the sidebar */
+    cursor: pointer;
+}

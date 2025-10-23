@@ -14,7 +14,9 @@ import FlashTattooSizeSelection from "../Pages/FlashTattooSizeSelect/FlashTattoo
 import FlashTattooLocationSelect from "../Pages/FlashTattooLocationSelect/FlashTattooLocationSelect";
 import CoverupTattooSizeSelect from "../Pages/CoverupTattooSizeSelect/CoverupTattooSizeSelect";
 import CoverupTattooColorSelect from "../Pages/CoverupTattooColorSelect/CoverupTattooColorSelect";
+import FlashTattooColorSelect from "../Pages/FlashTattooColorSelect/FlashTattooColorSelect";
 import PaymentPage from "../Pages/PaymentPage/PaymentPage";
+import CalenderPage from "../Pages/CalenderPage/CalenderPage";
 
 const router = createBrowserRouter([
     {
@@ -66,6 +68,10 @@ const router = createBrowserRouter([
                 element: <CustomTattooSizeSelect />
             },
             {
+                path: "custom-tattoo/location",
+                element: <FlashTattooLocationSelect />
+            },
+            {
                path:"custom-tattoo/book-appointment",
                element : <AppointmentBooking />
             },
@@ -83,12 +89,22 @@ const router = createBrowserRouter([
                 element: <FlashTattooLocationSelect />
             },
             {
+                path: "flash-tattoo/color",
+                element: <FlashTattooColorSelect />
+            },
+            {
                  path: "flash-tattoo/book-appointment",
                  element : <AppointmentBooking/>
             },
             {
                 path: "piercing",
                 element : <PiercingSelect/>
+                
+            },
+            {
+                path: "piercing/location",
+                // element: <FlashTattooLocationSelect />
+                element : <CalenderPage />
             },
             { 
                 path: "piercing/book-appointment",
@@ -105,6 +121,10 @@ const router = createBrowserRouter([
             {
                  path: "coverup-tattoo/color",
                  element : <CoverupTattooColorSelect />
+            },
+            {
+                path: "coverup-tattoo/location",
+                element: <FlashTattooLocationSelect />
             },
             {
                  path: "coverup-tattoo/book-appointment",

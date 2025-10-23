@@ -11,8 +11,7 @@ const Footer = () => {
   const flashTattoDetail = useSelector((state) => state.flashTattoo);
   const coverupTattooDetail = useSelector((state)=> state.coverupTattoo)
   const piercingDetail = useSelector((state) => state.piercing);
-  console.log(customTattooDetail);
-  
+ 
   const isActive = customTattooDetail.isActive || flashTattoDetail.isActive || coverupTattooDetail.isActive || piercingDetail.isActive;
 
   const {pathname: path} = useLocation();
@@ -20,6 +19,7 @@ const Footer = () => {
 
 
   const {onContinue} = useContinue();
+
 
   return (
     <div className="footer">
@@ -59,9 +59,9 @@ const Footer = () => {
                <p className="flash-tattoo-service-size">{flashTattoDetail.size}</p>
             </div>}
              
-             {flashTattoDetail.location && <div className="footer-service-detail-info">
+             {flashTattoDetail.location.name && <div className="footer-service-detail-info">
                 <p>Locaion:  </p>
-               <p>{flashTattoDetail.location}</p>
+               <p>{flashTattoDetail.location.name}</p>
             </div>}
             
           </div>

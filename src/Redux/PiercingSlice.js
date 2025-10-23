@@ -7,8 +7,11 @@ const initialState = {
         img : "",
         isActive : false,
         type : "",
+        location : {
+            name : "",
+            id : ""
+        }
         
-    
 }
 
 const piercingSlice = createSlice({
@@ -24,9 +27,12 @@ const piercingSlice = createSlice({
        setPiercingImg : (state,action) => {
         state.img = action.payload
        },
+       setPiercingLocation : (state,action) => {
+            state.location = action.payload
+        },
        resetPiercingValue : () => initialState
     }
 })
 
-export const  {setPiercingType,setPiercingImg,setPiercingIsActive,resetPiercingValue} = piercingSlice.actions
+export const  {setPiercingLocation,setPiercingType,setPiercingImg,setPiercingIsActive,resetPiercingValue} = piercingSlice.actions
 export default piercingSlice.reducer

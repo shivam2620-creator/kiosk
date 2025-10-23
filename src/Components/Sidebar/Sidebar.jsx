@@ -10,7 +10,7 @@ import SidebarButtonUi from '../SidebarButtonUi/SidebarButtonUi';
 
 
 
-export default function Sidebar() {
+export default function Sidebar({close}) {
     const [selectedService, setSelectedService] = useState(null);
     const navigate = useNavigate();
     const {pathname:path} = useLocation();
@@ -51,7 +51,13 @@ export default function Sidebar() {
             </div>
             
              {services.map((opt,indx) => {
-                return <SidebarButtonUi key={indx}  service={opt} selectedService={selectedService} />
+                return <SidebarButtonUi 
+                     key={indx}  
+                     service={opt} 
+                     selectedService={selectedService}
+                     close={close}
+                     />
+                    
              })}
         </div>
     )

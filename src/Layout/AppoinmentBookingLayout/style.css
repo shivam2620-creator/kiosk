@@ -1,9 +1,23 @@
 .appointment-cont{
     display: flex;
+    ;
 
 }
 
 .appointment-detail-cont{
     flex: 1;
     padding: 20px;
+}
+
+@media(max-width: 768px){
+    .appointment-cont{
+        flex-direction: column;
+    }
+    
+    .appointment-detail-cont{
+       padding: 10px;
+    }
+    .custom-tattoo-design-option{
+         gap: .8rem;
+    }
 }

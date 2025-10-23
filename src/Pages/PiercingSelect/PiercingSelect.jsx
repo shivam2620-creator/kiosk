@@ -16,6 +16,7 @@ import { setPiercingIsActive } from "../../Redux/PiercingSlice"
 import { resetFlashTattooValue } from "../../Redux/FlashTattoDetailSlice"
 import { resetCoverupTattooValue } from "../../Redux/CoverUpTattooDetailSlice"
 import { resetCustomTattooValue } from "../../Redux/CustomTattooDetailSlice"
+import MainButtonUi from "../../Components/MainButtonUi/MainButtonUi"
 import Transition from "../../Transition"
     const buttons = [
         { img: lipPiercingImg,text: "Lip Piercing"},
@@ -31,7 +32,7 @@ const PiercingSelect = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const nextStep = () => navigate("/service/piercing/book-appointment")
+    const nextStep = () => navigate("/service/piercing/location")
     useEffect(() => {
                   dispatch(setPiercingType(buttons[selectedIndex].text))
                   dispatch(setPiercingIsActive(true))
@@ -55,7 +56,7 @@ const PiercingSelect = () => {
         <div className="piercing-option">
              {
                 buttons.map((design,indx) => {
-                    return <SidebarButtonUi 
+                    return <MainButtonUi 
                              key={indx} 
                              service={design}  
                              isSeleted={selectedIndex === indx} 

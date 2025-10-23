@@ -9,6 +9,10 @@ const initialState = {
         size : "",
         color: "",
         isActive : false,
+        location : {
+            name : "",
+            id : ""
+        },
     
 }
 
@@ -32,11 +36,14 @@ const coverupTattoSlice = createSlice({
         setCoverupTattooIsActive: (state,action) => {
             state.isActive = action.payload
         },
+        setCoveruptattooLocation : (state,action) => {
+            state.location = action.payload
+        },
         resetCoverupTattooValue : () => initialState
              
         
     }
 })
 
-export const  {setCoverTattooColor,setCoverupTattoSize,setCoverupTattooPlacement,setCoverupTattooIsActive,setCoverupTattooImg,resetCoverupTattooValue} = coverupTattoSlice.actions
+export const  {setCoveruptattooLocation,setCoverTattooColor,setCoverupTattoSize,setCoverupTattooPlacement,setCoverupTattooIsActive,setCoverupTattooImg,resetCoverupTattooValue} = coverupTattoSlice.actions
 export default coverupTattoSlice.reducer

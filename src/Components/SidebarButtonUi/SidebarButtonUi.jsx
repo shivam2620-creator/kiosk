@@ -1,27 +1,33 @@
-import "./style.css"
-import { useContinue } from "../../Provider/ContinueContext"
+// SidebarButtonUi.jsx
+import "./style.css";
+import { useContinue } from "../../Provider/ContinueContext";
 import { useEffect } from "react";
 
-const SidebarButtonUi = ({key,service,selectedService,isSeleted,setSelectedIndex,nextStep}) => {
-  const {setOnContinue} = useContinue();
+const SidebarButtonUi = ({ service, selectedService, isSeleted, setSelectedIndex, nextStep, close }) => {
+  const { setOnContinue } = useContinue();
+
   useEffect(() => {
         setOnContinue(nextStep);
   },[setOnContinue])
 
-
   return (
     <button
-                        key={key}
-                        className={`service-button ${selectedService && selectedService === service.service  || isSeleted ? "selected" : ""}`}
-                        onClick={() => {
-                          service.click?.()
-                          setSelectedIndex(); 
-                         
-                          }}>
-                        <img src={service.img} alt={service.text} />
-                        <p>{service.text}</p>
-    </button>
-  )
-}
+      className={`service-button ${selectedService === service.service || isSeleted ? "seleted" : ""}`}
+      onClick={() => {
+        service.click?.();
+        setSelectedIndex?.();
+        close?.();
+      }}
+      aria-pressed={isSeleted ? "true" : "false"}
+    >
+      {/* image - loading lazy */}
+      <div className="service-image">
+        <img src={service.img} alt={service.text} loading="lazy" decoding="async" />
+      </div>
 
-export default SidebarButtonUi
+      <p className="service-label">{service.text}</p>
+    </button>
+  );
+};
+
+export default SidebarButtonUi;

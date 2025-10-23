@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setCustomTattoSize } from '../../Redux/CustomTattooDetailSlice';
 import { setCustomTattooIsActive } from "../../Redux/CustomTattooDetailSlice";
+import MainButtonUi from "../../Components/MainButtonUi/MainButtonUi";
 import Transition from "../../Transition";
 import { useSelector } from "react-redux";
 import "./style.css"
@@ -22,7 +23,7 @@ const CustomTattooSizeSelect = () => {
         { img: tattooLarge, text: "Tattoo Large" },
     ];
     console.log(customTattooDetail)
-    const nextStep = () => navigate("/service/custom-tattoo/book-appointment")
+    const nextStep = () => navigate("/service/custom-tattoo/location")
 
     useEffect(() => {
          if(customTattooDetail.tattooOption === ""){
@@ -52,7 +53,7 @@ const CustomTattooSizeSelect = () => {
         <div className="custom-tattoo-sizes-option">
              {
                 buttons.map((size,indx) => {
-                    return <SidebarButtonUi 
+                    return <MainButtonUi 
                                key={indx} 
                                service={size}  
                                isSeleted={selectedIndex === indx} 

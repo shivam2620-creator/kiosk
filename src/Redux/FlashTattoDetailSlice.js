@@ -6,8 +6,12 @@ const initialState = {
         service : "flash-tattoo",
         img :"",
         tattooOption : "",
+        color: "",
         size : "",
-        location : "",
+        location : {
+            name : "",
+            id : ""
+        },
         isActive : false,
     
 }
@@ -32,9 +36,12 @@ const flashTattoSlice = createSlice({
         setFlashTattooIsActive: (state,action) => {
             state.isActive = action.payload
         },
+        setFlashTattooColor : (state,action) => {
+            state.color = action.payload
+        },
         resetFlashTattooValue : () => initialState
     }
 })
 
-export const  {setFlashTattoSize,setFlashTattooLocation,setFlashTattooIsActive,setFlashTattooOption,setFlashTattooImg,resetFlashTattooValue} = flashTattoSlice.actions
+export const  {setFlashTattooColor,setFlashTattoSize,setFlashTattooLocation,setFlashTattooIsActive,setFlashTattooOption,setFlashTattooImg,resetFlashTattooValue} = flashTattoSlice.actions
 export default flashTattoSlice.reducer

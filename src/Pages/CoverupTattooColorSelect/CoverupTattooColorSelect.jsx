@@ -7,6 +7,7 @@ import SidebarButtonUi from "../../Components/SidebarButtonUi/SidebarButtonUi"
 import { useDispatch } from "react-redux"
 import { setCoverTattooColor } from "../../Redux/CoverUpTattooDetailSlice"
 import { useState,useEffect, use } from "react"
+import MainButtonUi from "../../Components/MainButtonUi/MainButtonUi"
 import { useSelector } from "react-redux"
 
   const buttons = [
@@ -19,7 +20,7 @@ const CoverupTattooColorSelect = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const coverupTattooDetail = useSelector(state => state.coverupTattoo)
-    const nextStep = () => navigate("/service/coverup-tattoo/book-appointment")
+    const nextStep = () => navigate("/service/coverup-tattoo/location")
          useEffect(() => {
                   dispatch(setCoverTattooColor(buttons[selectedIndex].text))
               },[selectedIndex])
@@ -44,13 +45,13 @@ const CoverupTattooColorSelect = () => {
         <div className="coverup-tattoo-color-option">
              {
                 buttons.map((design,indx) => {
-                    return <SidebarButtonUi 
+                    return <MainButtonUi 
                                key={indx} 
                                service={design}  
                                isSeleted={selectedIndex === indx} 
                                setSelectedIndex={() => setSelectedIndex(indx)}
                                nextStep={() => nextStep}
-                               />
+                           />
                 })
 
 

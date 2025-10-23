@@ -1,32 +1,50 @@
-.coverup-tattoo-design-select{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+/* CoverupTattooDesignSelect.style.css */
+
+.coverup-tattoo-design-select {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.coverup-tattoo-desing-selection-detail{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+/* details */
+.coverup-tattoo-desing-selection-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-.coverup-tattoo-desing-selection-detail h3{
-    font-family: Anton;
-    color: #DFDFDF;
-}
-
-.tattoo-placement{
-font-family: Termina Test;
-font-weight: 500;
+.coverup-tattoo-desing-selection-detail h3 {
+  font-family: Anton, sans-serif;
+  color: #DFDFDF;
 
 }
 
+.tattoo-placement {
+  font-family: "Termina Test", sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
 
+/* responsive grid: cards expand to fill row, with minimum width */
+.coverup-tattoo-design-option {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
 
-.coverup-tattoo-design-option{
-        display: flex;
-    flex-wrap: wrap;
-    gap: 1.4rem;
-    align-items: flex-start;
-    align-content: flex-start;
+/* larger desktop: increase min card size */
+@media (min-width: 1200px) {
+  .coverup-tattoo-design-option {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+/* small-screen adjustments */
+@media (max-width: 767px) {
+  .coverup-tattoo-design-option {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.6rem;
+  }
 }

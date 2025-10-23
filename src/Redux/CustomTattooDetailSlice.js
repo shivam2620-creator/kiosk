@@ -8,6 +8,10 @@ const initialState = {
         tattooOption : "",
         size : "",
         isActive : false,
+        location : {
+            name : "",
+            id : ""
+        },
     
 }
 
@@ -28,9 +32,12 @@ const customTattoSlice = createSlice({
         setCustomTattooIsActive: (state,action) => {
             state.isActive = action.payload
         },
+        setCustomtattooLocation : (state,action) => {
+            state.location = action.payload
+        },
         resetCustomTattooValue : () => initialState
     }
 })
 
-export const  {setTattooOption,setCustomTattoSize,setCustomTattooImg,setCustomTattooIsActive,resetCustomTattooValue} = customTattoSlice.actions
+export const  {setCustomtattooLocation,setTattooOption,setCustomTattoSize,setCustomTattooImg,setCustomTattooIsActive,resetCustomTattooValue} = customTattoSlice.actions
 export default customTattoSlice.reducer

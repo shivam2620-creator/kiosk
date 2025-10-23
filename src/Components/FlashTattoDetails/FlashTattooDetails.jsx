@@ -16,7 +16,7 @@ const FlashTattooDetails = ({details}) => {
                         <p>Size: <span>{details.size}</span></p>
                         {/* <p>color: {details.color}</p> */}
                     </div>
-                    <p>Locaion: {details.location}</p>
+                    <p>Locaion: {details.location.name}</p>
                 </div>
             </div>
           

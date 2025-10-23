@@ -25,7 +25,7 @@ const FlashTattooSizeSelection = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
        const navigate = useNavigate();
        const dispatch = useDispatch();
-       const nextStep = () => navigate("/service/flash-tattoo/location")
+       const nextStep = () => navigate("/service/flash-tattoo/color")
        const {setOnContinue} = useContinue();
        const flashTattooDetail = useSelector(state => state.flashTattoo);
         useEffect(() => {

@@ -48,3 +48,8 @@
     background-color: #817B7B;
     border-radius: 14px;
 }
+
+.location-name-cont h3{
+  color : white;
+  font-weight: 600;
+}

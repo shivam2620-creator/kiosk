@@ -14,7 +14,7 @@
     display: flex;
     gap: 1rem;
     align-items: flex-start;
-    padding: 20px;
+    padding: 20px 40px;
 
 }
 
@@ -79,12 +79,32 @@
   }
 }
 
-@media(max-widtH: 1000px){
-    .footer-tattoo-details{
+@media(max-width:1000px){
+    .footer{
         flex-direction: column;
-        
+ 
     }
+
+    .footer-visit-us-img{
+        width: 100%;
+        height: 400px;
+ 
+        order: 2;
+    }
+
+  
+
+
     .footer-service-detail{
         padding: 0;
+        width: 100%;
+        
+    }
+
+    .footer button{
+        padding: 2rem 2rem;
+        font-size: 16px;
+        margin: 20px 0;
+        width: 90%;
     }
 }

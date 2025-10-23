@@ -16,6 +16,7 @@ import { useState,useEffect } from "react"
 import { resetCustomTattooValue } from "../../Redux/CustomTattooDetailSlice"
 import { resetFlashTattooValue } from "../../Redux/FlashTattoDetailSlice"
 import { resetPiercingValue } from "../../Redux/PiercingSlice"
+import MainButtonUi from "../../Components/MainButtonUi/MainButtonUi"
 import Transition from "../../Transition"
 
     const buttons = [
@@ -62,7 +63,7 @@ const CoverupTattooDesignSelect = () => {
         <div className="coverup-tattoo-design-option">
              {
                 buttons.map((design,indx) => {
-                    return <SidebarButtonUi 
+                    return <MainButtonUi 
                              key={indx} 
                              service={design}  
                              isSeleted={selectedIndex === indx}

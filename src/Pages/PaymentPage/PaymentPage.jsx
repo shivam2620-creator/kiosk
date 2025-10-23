@@ -1,84 +1,75 @@
-import AppointmentTopBar from "../../Components/AppointmentTopBar/AppointmentTopBar"
-import AppointmentDetails from "../../Components/AppointmentDetails/AppointmentDetails"
-import { useSelector } from "react-redux"
-import { useNavigate } from "react-router-dom"
-import FlashTattoHeader from "../../Components/Headers/FlashTattoHeader"
-import CustomTattooHeader from "../../Components/Headers/CustomTattooHeader"
-import PiercingHeader from "../../Components/Headers/PiercingHeader"
-import Transition from "../../Transition"
-import "./style.css"
-import { useEffect, useState } from "react"
-import PaymentForm from "../../Components/PaymentForm/PaymentForm"
+import AppointmentTopBar from "../../Components/AppointmentTopBar/AppointmentTopBar";
+import AppointmentDetails from "../../Components/AppointmentDetails/AppointmentDetails";
+import { useSelector } from "react-redux";
+import FlashTattoHeader from "../../Components/Headers/FlashTattoHeader";
+import CustomTattooHeader from "../../Components/Headers/CustomTattooHeader";
+import PiercingHeader from "../../Components/Headers/PiercingHeader";
+import Transition from "../../Transition";
+import "./style.css";
+import { useEffect, useState } from "react";
+import PaymentForm from "../../Components/PaymentForm/PaymentForm";
+// import { createAppointment } from "../../Apis/CreateAppointmentApi" // keep as needed
 
 const PaymentPage = () => {
-     const appointmentDetail = useSelector((state) => state.appointment)
-     const customTattooDetail = useSelector((state) => state.customTattoo)
-     const flashTattoDetail = useSelector((state) => state.flashTattoo);
-     const coverupTattooDetail = useSelector((state)=> state.coverupTattoo)
-     const piercingDetail = useSelector((state) => state.piercing);
-     const navigate = useNavigate();
+  const appointmentDetails = useSelector((state) => state.appointment);
+  const [service, setService] = useState({});
+  const [details, setDetails] = useState({
+    fullName: "",
+    email: "",
+    mobileNumber: "",
+    date: "",
+    startMinute: null,
+    endMinute: null,
+    amount: 200,
+    artistId: null,
+    studioId: null,
+  });
 
-     const [selectedServiceDetail,setSelectedServiceDetail] = useState({});
-   
-
-      useEffect(() => {
-  // navigate away only when we know all slices are false
-  if (
-    !customTattooDetail.isActive &&
-    !flashTattoDetail.isActive &&
-    !coverupTattooDetail.isActive &&
-    !piercingDetail.isActive
-  ) {
-    navigate("/");
-  }
-}, [
-  customTattooDetail.isActive,
-  flashTattoDetail.isActive,
-  coverupTattooDetail.isActive,
-  piercingDetail.isActive,
-  navigate
-]);
-
-useEffect(() => {
-  if (customTattooDetail.isActive) {
-    setSelectedServiceDetail(customTattooDetail);
-  } else if (flashTattoDetail.isActive) {
-    setSelectedServiceDetail(flashTattoDetail);
-  } else if (coverupTattooDetail.isActive) {
-    setSelectedServiceDetail(coverupTattooDetail);
-  } else if (piercingDetail.isActive) {
-    setSelectedServiceDetail(piercingDetail);
-  } else {
-    setSelectedServiceDetail({}); // optional fallback
-  }
-}, [
-  customTattooDetail,
-  flashTattoDetail,
-  coverupTattooDetail,
-  piercingDetail
-]);
-
+  // initialize details when appointmentDetails become available
+  useEffect(() => {
+    if (!appointmentDetails) return;
+    setDetails((prev) => ({
+      ...prev,
+      fullName: appointmentDetails.fullName ?? prev.fullName,
+      email: appointmentDetails.email ?? prev.email,
+      phone: appointmentDetails.mobileNumber ?? prev.mobileNumber,
+      date: appointmentDetails.date ?? prev.date,
+      startMinute: appointmentDetails?.time?.startMinute ?? prev.startMinute,
+      endMinute: appointmentDetails?.time?.endMinute ?? prev.endMinute,
+      artistId: appointmentDetails?.time?.artistId ?? prev.artistId,
+      studioId: appointmentDetails?.time?.studioId ?? prev.studioId,
+      // amount left as default (200) — adjust if you compute it later
+    }));
+  }, [
+    appointmentDetails?.fullName,
+    appointmentDetails?.email,
+    appointmentDetails?.mobileNumber,
+    appointmentDetails?.date,
+    appointmentDetails?.time?.startMinute,
+    appointmentDetails?.time?.endMinute,
+    appointmentDetails?.time?.artistId,
+    appointmentDetails?.time?.studioId,
+  ]);
 
   return (
     <>
-    { selectedServiceDetail.isActive && selectedServiceDetail.service === "custom-tattoo" && <CustomTattooHeader /> }
-    { selectedServiceDetail.isActive && selectedServiceDetail.service === "flash-tattoo" && <FlashTattoHeader /> }
-    { selectedServiceDetail.isActive && selectedServiceDetail.service === "piercing" && <PiercingHeader /> }
-    { selectedServiceDetail.isActive && selectedServiceDetail.service === "coverup-tattoo" && <CustomTattooHeader /> }
-    <div className="payment-page">
+      {service.isActive && service.service === "custom-tattoo" && <CustomTattooHeader />}
+      {service.isActive && service.service === "flash-tattoo" && <FlashTattoHeader />}
+      {service.isActive && service.service === "piercing" && <PiercingHeader />}
+      {service.isActive && service.service === "coverup-tattoo" && <CustomTattooHeader />}
 
-        <AppointmentTopBar title={"Please Complete The Payment"}/>
-        <AppointmentDetails serviceDetail={selectedServiceDetail} appointmentDetails={appointmentDetail}/>
-        
-        <hr style={{"border-top" : "1px solid #9A9A9A"}}/>
+      <div className="payment-page">
+        <AppointmentTopBar title={"Please Complete The Payment"} />
+        {/* AppointmentDetails will call setDetails & setService as the selected service becomes known */}
+        <AppointmentDetails setDetails={setDetails} setService={setService} />
+
+        <hr style={{ borderTop: "1px solid #9A9A9A" }} />
         <div className="payment-detail-form">
-          <PaymentForm />
-
+          <PaymentForm data={details} />
         </div>
-      
-    </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Transition(PaymentPage)
+export default Transition(PaymentPage);

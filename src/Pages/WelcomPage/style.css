@@ -9,6 +9,7 @@ font-weight: 400 !important;
 font-size: 64px !important;
 text-align: center;
 font-family: Anton;
+  margin-top: 10px;
 
 }
 
@@ -19,7 +20,23 @@ font-family: Anton;
 .welcome-page-options{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 70px;
+    justify-content:  center;
+    gap: 110px;
     margin-top: 20px;
+}
+
+@media(max-width: 768px){
+    .welcome-page-title h1{
+        font-size: 48px !important;
+    }
+    .welcome-page-title p{
+        font-size: 32px !important;
+      
+    }
+
+    .welcome-page-options{
+        gap: 30px;
+        margin-top: 40px;
+    }
+  
 }

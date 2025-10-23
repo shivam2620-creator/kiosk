@@ -9,6 +9,9 @@ import { useLocation } from "react-router-dom";
 import FlashTattoHeader from "../../Components/Headers/FlashTattoHeader";
 import PiercingHeader from "../../Components/Headers/PiercingHeader";
 import { AnimatePresence,motion } from 'framer-motion';
+import useMobile from "../../CustomHook/useMobile";
+import MobileSidebar from "../../Components/MobileSidebar/MobileSidebar";
+import { s } from "framer-motion/client";
 
 
 
@@ -19,6 +22,8 @@ const pageVariants = {
 };
 const AppointmentBookingLayout = () => {
   const navigate = useNavigate();
+  const isMobile = useMobile();
+  const [showMobileSidebar,setShowMobileSidebar] = useState(true);
   const {pathname: path} = useLocation();
   const [header ,setHeader ] = useState( <CustomTattooHeader />);
 
@@ -44,8 +49,12 @@ const AppointmentBookingLayout = () => {
       <div className="appointment-cont">
         
         
-          <Sidebar />
- <AnimatePresence mode='wait'>
+       
+             <Sidebar />
+           {/* {isMobile && showMobileSidebar && <MobileSidebar close={() => setShowMobileSidebar(false)}/>} */}
+        
+         
+        <AnimatePresence mode='wait'>
 
         <div className="appointment-detail-cont">
            

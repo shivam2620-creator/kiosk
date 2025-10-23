@@ -22,6 +22,7 @@ import { resetPiercingValue } from '../../Redux/PiercingSlice';
 import { resetCoverupTattooValue } from '../../Redux/CoverUpTattooDetailSlice';
 import { resetFlashTattooValue } from '../../Redux/FlashTattoDetailSlice';
 import { setCustomTattooIsActive } from '../../Redux/CustomTattooDetailSlice';
+import MainButtonUi from '../../Components/MainButtonUi/MainButtonUi';
 
 import Transition from '../../Transition';
 
@@ -67,7 +68,7 @@ const CustomTattoDesignSelect = () => {
         <div className="custom-tattoo-design-option">
              {
                 buttons.map((design,indx) => {
-                    return <SidebarButtonUi 
+                    return <MainButtonUi
                                  key={indx} 
                                  service={design}  
                                  isSeleted={selectedIndex === indx} 

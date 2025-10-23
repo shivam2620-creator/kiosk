@@ -1,0 +1,48 @@
+.flash-tattoo-color-select{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.flash-tattoo-color-selection-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.flash-tattoo-color-selection-detail h3{
+    font-family: Anton;
+    color: #DFDFDF;
+}
+
+.flash-tattoo-color{
+font-family: Termina Test;
+font-weight: 500;
+
+}
+
+
+.flash-tattoo-color-option{
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+/* tablet: slightly smaller cards */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .flash-tattoo-color-option {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+
+}
+
+/* mobile: even smaller cards */
+@media (max-width: 767px) {
+  .flash-tattoo-color-option {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.6rem;
+  }
+
+}

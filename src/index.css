@@ -25,7 +25,7 @@ font-family: Termina Test;
 font-weight: 600;
 font-size: 16px;
 color: white;
-margin-top: 1rem;
+
 }
 
 h1{
@@ -59,6 +59,22 @@ button{
 font-weight: 600;
 font-style: Demi;
 font-size: 28px;
+
+}
+
+@media(max-width: 768px){
+
+
+  h2{
+    font-size: 32px;
+  }
+  p{
+    font-size: 14px;
+  }
+
+  h3{
+    font-size: 20px;
+  }
 
 
 }

@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { setCoverupTattoSize } from "../../Redux/CoverUpTattooDetailSlice";
 import { useSelector } from "react-redux";
 import Transition from "../../Transition";
+import MainButtonUi from "../../Components/MainButtonUi/MainButtonUi";
 import { useState,useEffect } from "react";
 
   const buttons = [
@@ -49,7 +50,7 @@ const CoverupTattooSizeSelect = () => {
         <div className="coverup-tattoo-size-option">
              {
                 buttons.map((design,indx) => {
-                    return <SidebarButtonUi 
+                    return <MainButtonUi 
                           key={indx} 
                           service={design}  
                           isSeleted={selectedIndex === indx}

@@ -4,6 +4,8 @@ import flashTattooReducer from "./FlashTattoDetailSlice"
 import coverTattooReducer from "./CoverUpTattooDetailSlice"
 import piercingReducer from "./PiercingSlice"
 import appointmentDetailReducer from './AppointmentDetailSlice';
+import  allStudiosReducer  from './AllStudios';
+import availabilityReducer from "./availabilitySlice";
 
 export const store = configureStore({
   reducer: {
@@ -11,7 +13,10 @@ export const store = configureStore({
     flashTattoo : flashTattooReducer,
     coverupTattoo : coverTattooReducer,
     piercing : piercingReducer,
-    appointment : appointmentDetailReducer
+    appointment : appointmentDetailReducer,
+    studios : allStudiosReducer,
+    availability: availabilityReducer,
+
   },
 
 });

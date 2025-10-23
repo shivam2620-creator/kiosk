@@ -1,24 +1,43 @@
-.custom-tattoo-design-selection{
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+.coverup-tattoo-design-select {
+   display: flex;
+  flex-direction: column;
+
 }
 
 .custom-tattoo-desing-selection-detail{
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .custom-tattoo-desing-selection-detail h3{
     font-family: anton;
     color: #DFDFDF;
+    margin-top: 2rem;
 }
 
-.custom-tattoo-design-option{
-        display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: flex-start;
-    align-content: flex-start;
+/* fixed-width grid that wraps like flex-wrap (cards do NOT shrink) */
+.custom-tattoo-design-option {
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+/* tablet: slightly smaller cards */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .custom-tattoo-design-option {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+
+}
+
+/* mobile: even smaller cards */
+@media (max-width: 767px) {
+  .custom-tattoo-design-option {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.6rem;
+  }
+
 }

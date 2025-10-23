@@ -24,9 +24,26 @@ font-weight: 500;
 
 
 .coverup-tattoo-size-option{
-        display: flex;
-    flex-wrap: wrap;
-    gap: 1.4rem;
-    align-items: flex-start;
-    align-content: flex-start;
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+/* tablet: slightly smaller cards */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .coverup-tattoo-size-option {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+
+}
+
+/* mobile: even smaller cards */
+@media (max-width: 767px) {
+  .coverup-tattoo-size-option {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.6rem;
+  }
+
 }

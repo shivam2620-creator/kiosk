@@ -58,7 +58,7 @@ const CalenderPage = () => {
   }, [calendarId]);
 
   return (
-    <div style={{ width: '100%' }}>
+    <div style={{ width: '100%',"padding-top" : "72px" }}>
       {calendarId ? (
         <iframe
           src={`https://links.tattooagency.com/widget/booking/${calendarId}`}
@@ -72,6 +72,7 @@ const CalenderPage = () => {
             border: 'none',
             overflow: 'hidden',
             display: 'block'
+            
           }}
         />
       ) : (

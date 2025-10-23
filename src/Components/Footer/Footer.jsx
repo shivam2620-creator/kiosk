@@ -13,7 +13,8 @@ const Footer = () => {
   const piercingDetail = useSelector((state) => state.piercing);
  
   const isActive = customTattooDetail.isActive || flashTattoDetail.isActive || coverupTattooDetail.isActive || piercingDetail.isActive;
-
+  const isImage = customTattooDetail.img || flashTattoDetail.img || coverupTattooDetail.img || piercingDetail.img
+  console.log(isImage)
   const {pathname: path} = useLocation();
 
 
@@ -23,15 +24,15 @@ const Footer = () => {
 
   return (
     <div className="footer">
-        <div className="footer-visit-us-img">
+       <div className="footer-visit-us-img">
              <img src={visitUsImg} alt="visit-us" width="100%" height="100%" />
         </div>
 
         {  <div className="footer-tattoo-details">
 
-          <div className="footer-servic-img">
-            {isActive && <img src={customTattooDetail.img || flashTattoDetail.img || coverupTattooDetail.img || piercingDetail.img} alt="" width="100%" height="100%"   />}
-          </div>
+          {isImage && <div className="footer-servic-img">
+            {isActive &&  <img src={customTattooDetail.img || flashTattoDetail.img || coverupTattooDetail.img || piercingDetail.img} alt="" width="100%" height="100%"   />}
+          </div>}
 
           {/* custom tattoo */}
 

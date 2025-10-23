@@ -25,6 +25,7 @@ import Transition from "../../Transition"
         {img: eyebrowPiercingImg, text: "Eyebrow Piercing"},
         { img: nosePiercingImg, text: "Nose Piercing"},
         {img: septumPiercingImg,text: "Septum Piercing"},
+        {img: "" , text: "other"}
       ];
 
 const PiercingSelect = () => {

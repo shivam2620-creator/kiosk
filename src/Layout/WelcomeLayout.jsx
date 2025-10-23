@@ -5,6 +5,7 @@ import PiercingHeader from '../Components/Headers/PiercingHeader'
 
 import { AnimatePresence,motion } from 'framer-motion'
 import "./style.css"
+import CustomTattooHeader from '../Components/Headers/CustomTattooHeader'
 
 
 const pageVariants = {
@@ -18,7 +19,7 @@ const WelcomeLayout = () => {
    
     <div className="welcome-screen">
 
-            <PiercingHeader />
+            <CustomTattooHeader />
            <AnimatePresence mode='wait' >
         <div className="pages-container">
               <motion.div

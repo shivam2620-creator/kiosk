@@ -3,6 +3,7 @@ import "./style.css";
 import { useContinue } from "../../Provider/ContinueContext";
 import { useEffect } from "react";
 import { color } from "framer-motion";
+import { p } from "framer-motion/client";
 
 const SidebarButtonUi = ({ service, selectedService, isSeleted, setSelectedIndex, nextStep, close }) => {
   const { setOnContinue } = useContinue();
@@ -25,9 +26,9 @@ const SidebarButtonUi = ({ service, selectedService, isSeleted, setSelectedIndex
       aria-pressed={isSeleted ? "true" : "false"}
     >
       {/* image - loading lazy */}
-      <div className="main-service-image">
-        {service.img && <img src={service.img} alt={service.text} loading="lazy" decoding="async" />}
-      </div>
+      {service.img && <div className="main-service-image">
+         <img src={service.img} alt={service.text} loading="lazy" decoding="async" />
+      </div> }
       <p className="main-service-label">{service.text}</p>
     </button>
   );

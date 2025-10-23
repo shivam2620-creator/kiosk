@@ -27,7 +27,7 @@ const Footer = () => {
              <img src={visitUsImg} alt="visit-us" width="100%" height="100%" />
         </div>
 
-        { !path.includes("book-appointment") && <div className="footer-tattoo-details">
+        {  <div className="footer-tattoo-details">
 
           <div className="footer-servic-img">
             {isActive && <img src={customTattooDetail.img || flashTattoDetail.img || coverupTattooDetail.img || piercingDetail.img} alt="" width="100%" height="100%"   />}
